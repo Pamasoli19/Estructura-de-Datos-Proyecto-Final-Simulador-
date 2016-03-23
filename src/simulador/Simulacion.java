@@ -6,7 +6,7 @@
 package simulador; //Nombre del Paquete de la Clase
 
 /**
- * @author Oscar F. Fonseca Salicetti & Andrés J. Jiménez Leandro
+ * @author José Pablo Marín Solís
  **/
 
 public class Simulacion { //Nombre e Inicio de la Clase "Simulación"
