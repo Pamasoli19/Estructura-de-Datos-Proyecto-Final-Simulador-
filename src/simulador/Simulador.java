@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package simulador; //Nombre del Paquete de la Clase
 
@@ -34,20 +30,16 @@ public class Simulador { //Nombre del Main del Programa
         Simulacion miSimulacion = new Simulacion();
         Producto miProducto = new Producto();
         Convertidor miConvertidor = new Convertidor();
-        
         /*
          * A continuación, se seteará el producto, esto, solo se puede realizar 1 vez.
          */
-        
         //Solicitud del Nombre del Producto a Crear:
         miProducto.setNombre(JOptionPane.showInputDialog("Digite el Nombre del Producto que Realizarán las Máquinas: "));
         //Solicitud del Precio del Producto a Crear:
         miProducto.setPrecio(Double.parseDouble(JOptionPane.showInputDialog("Digite el Precio de Venta del Producto que se Creará: ¢")));
-       
         /*
          * Menú Para Cambiar Las Opciones de las Máquinas:
          */
-    
         do { //Ciclo de Accesos al Menú
             
             /*
@@ -151,16 +143,13 @@ public class Simulador { //Nombre del Main del Programa
                 
             } while (opt != 8); //Fin del Ciclo de Clausura que Cierra el Menú
             
-        } while (opt < 9); //Fin del Ciclo de Acceso al Menú
-        
+        } while (opt < 9); //Fin del Ciclo de Acceso al Menú       
         /*
          * Finalmente: Se Seteara el Tiempo de Simulación Deseado
-         */
-        
+         */       
         /* SISTEMA VIEJO DE CONVERTIDOR CON PREGUNTA AL USUARIO SIN INCLUSIÓN EN EL MENÚ: (POR OSCAR F. FONSECA SALICETTI)
         System.out.println("Coloque el tiempo de simulacion como se le solicita, si desea usar el convertidor de tiempo, digite 1 en el siguente cuadro, sino, digite 2;");
-        convertidor = Integer.parseInt(JOptionPane.showInputDialog("Digite 1 si desea usar el convertidor"));
-        
+        convertidor = Integer.parseInt(JOptionPane.showInputDialog("Digite 1 si desea usar el convertidor"));        
         if (convertidor == 1) {
             miConvertidor.setHoras(Integer.parseInt(JOptionPane.showInputDialog("Digite las horas que desea convertir a días")));
             miConvertidor.setDias(Integer.parseInt(JOptionPane.showInputDialog("Digite los días que desea convertir a semanas")));
@@ -168,7 +157,6 @@ public class Simulador { //Nombre del Main del Programa
             System.out.println(miConvertidor.converHoras());
             System.out.println(miConvertidor.converDias());
             System.out.println(miConvertidor.converSemanas());
-
         }
         miSimulacion.setHoras(Integer.parseInt(JOptionPane.showInputDialog("Digite las horas por día que van a trabajar las maquinas." + '\n' + "Siendo válidos numeros desde el 1 hasta el 24")));
         miSimulacion.setDias(Integer.parseInt(JOptionPane.showInputDialog("Digite las días por semana que van a trabajar las maquinas." + '\n' + "Siendo válidos numeros desde el 1 hasta el 30")));
